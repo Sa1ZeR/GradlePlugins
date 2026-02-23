@@ -39,3 +39,28 @@ gradlePlugin {
 tasks.test {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenKotlin") {
+            from(components["kotlin"])
+            pom {
+                name.set("GradlePlugins")
+                description.set("Jooq models generator")
+                url.set("https://github.com/Sa1ZeR/GradlePlugins")
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("Sa1ZeR")
+                        name.set("Sergey")
+                    }
+                }
+            }
+        }
+    }
+}
