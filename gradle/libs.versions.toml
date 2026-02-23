@@ -1,0 +1,17 @@
+[versions]
+liquibase = "4.33.0"
+postgresql = "42.7.10"
+jooq = "3.19.30"
+testcontainers = "1.21.4"
+
+[libraries]
+liquibase-core = { group = "org.liquibase", name = "liquibase-core", version.ref = "liquibase" }
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgresql" }
+testcontainers = { group = "org.testcontainers", name = "testcontainers", version.ref = "testcontainers" }
+testcontainers-postgresql = { group = "org.testcontainers", name = "postgresql", version.ref = "testcontainers" }
+
+jooq = { group = "org.jooq", name = "jooq", version.ref = "jooq" }
+jooq-meta = { group = "org.jooq", name = "jooq-meta", version.ref = "jooq" }
+jooq-codegen = { group = "org.jooq", name = "jooq-codegen", version.ref = "jooq" }
+
+[plugins]
